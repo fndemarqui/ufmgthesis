@@ -1,0 +1,23 @@
+Package: ufmgthesis
+Type: Package
+Title: Quarto thesis template for UFMG
+Version: 0.1.0
+Authors@R: c(person(given = "Fabio", family = "Demarqui", role = c("aut", "cre"),
+                    email = "fndemarqui@est.ufmg.br"))
+Description: Scaffolds and builds a Quarto-based thesis project using the UFMG thesis template.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: R (>= 4.0)
+Imports:
+    fs,
+    cli,
+    rlang
+Suggests:
+    quarto,
+    devtools,
+    testthat
+LazyData: true
+URL: https://github.com/fndemarqui/ufmgthesis
+BugReports: https://github.com/fndemarqui/ufmgthesis/issues
+RoxygenNote: 7.3.3

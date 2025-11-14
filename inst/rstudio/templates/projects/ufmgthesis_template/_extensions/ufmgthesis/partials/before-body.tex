@@ -1,0 +1,315 @@
+
+% Corrige o problema de página em branco forçada em twoside
+\makeatletter
+\def\cleardoublepage{\clearpage}
+\makeatother
+
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+
+
+% ============================================================
+% CAPA EXTERNA (com lombada simples)
+% ============================================================
+\begin{titlepage}
+  %\thispagestyle{empty}
+  \begin{center}
+    %\vspace*{2cm}
+    {\Huge \bfseries $thesis.title$ \par}
+    \vspace{1cm}
+    {\Large $thesis.author$ \par}
+    \vfill
+    {\large $thesis.university$ \par}
+    {\large $thesis.department$ \par}
+    $if(thesis.city)$
+      {\normalsize $thesis.city$ \par}
+    $endif$
+    $if(thesis.date)${\large $thesis.date$ \par}$endif$
+  \end{center}
+\end{titlepage}
+\newpage
+
+
+% ============================================================
+% CAPA INTERNA – conforme ABNT NBR 14724:2023
+% ============================================================
+\begin{titlepage}
+  \pagenumbering{gobble}
+  \begin{spacing}{1.0}
+    \null
+    \vspace*{1cm}
+
+    % ------------------------------------------------------------
+    % Logo da instituição (opcional, centralizado)
+    % ------------------------------------------------------------
+    $if(logo)$
+    \begin{center}
+      \includegraphics[width=3.5cm]{$logo$}
+    \end{center}
+    $endif$
+
+    \vspace{1cm}
+
+    % ------------------------------------------------------------
+    % Nome do autor (centralizado, maiúsculas)
+    % ------------------------------------------------------------
+    \begin{center}
+      $if(thesis.author)$
+        {\bfseries\MakeUppercase{$thesis.author$} \par}
+      $endif$
+    \end{center}
+
+    \vspace{2cm}
+
+    % ------------------------------------------------------------
+    % Título e subtítulo (centralizado, negrito)
+    % ------------------------------------------------------------
+    \begin{center}
+      $if(thesis.title)$
+        {\bfseries\MakeUppercase{$thesis.title$} \par}
+      $endif$
+
+      $if(thesis.subtitle)$
+        \vspace{0.5cm}
+        {\bfseries $thesis.subtitle$ \par}
+      $endif$
+    \end{center}
+
+    \vspace{2cm}
+
+    % ------------------------------------------------------------
+    % Local, instituição e ano (inferior da página)
+    % ------------------------------------------------------------
+    \vfill
+    \begin{center}
+      $if(thesis.university)$
+        {\normalsize $thesis.university$ \par}
+      $endif$
+
+      $if(thesis.city)$
+        {\normalsize $thesis.city$ \par}
+      $endif$
+
+      $if(thesis.date)$
+        {\normalsize $thesis.date$ \par}
+      $endif$
+    \end{center}
+
+  \end{spacing}
+%  \afterpage{\blankpage}
+\end{titlepage}
+\blankpage
+
+
+
+% ============================================================
+% FOLHA DE ROSTO / TÍTULO (com logo centralizado e mensagem à direita)
+% ============================================================
+\begin{titlepage}
+\begin{spacing}{0.1}
+%  \null\vfil
+  \pagenumbering{gobble}
+
+  \begin{center}
+    \includegraphics[width=3.5cm]{$logo$}
+  \end{center}
+
+  \vspace{0.5cm}
+
+  $if(thesis.title)$
+    {\LARGE \sffamily $thesis.title$ \par}
+  $endif$
+
+  \vspace{0.5cm}
+
+  $if(thesis.subtitle)$
+    {\Large \sffamily $thesis.subtitle$ \par}
+  $endif$
+
+  \vspace{0.5cm}
+
+  $if(thesis.author)$
+    {\Large \sffamily $thesis.author$ \par}
+  $endif$
+
+  \vspace{0.5cm}
+  \rule{\linewidth}{1mm}
+  \vspace{0.5cm}
+
+
+  $if(thesis.message)$
+    \hspace{6cm}% desloca o bloco para a direita
+    \begin{minipage}{8cm}
+      \raggedright
+      \normalsize
+      $thesis.message$
+    \end{minipage}
+  $endif$
+
+  \vspace{1.0cm}
+
+  $if(thesis.supervisor)$
+  \textbf{Orientador:} $thesis.supervisor$%\\[0.3cm]
+  $endif$
+  
+  $if(thesis.cosupervisor)$
+  \textbf{Coorientador:} $thesis.cosupervisor$\\%[0.3cm]
+  $endif$
+
+  $if(thesis.department)${\large $thesis.department$ \par}$endif$
+  $if(thesis.university)${\large $thesis.university$ \par}$endif$
+
+  \vspace{1cm}
+  $if(thesis.city)${\large \centering $thesis.city$ \par}$endif$
+  $if(thesis.date)${\large \centering $thesis.date$ \par}$endif$
+
+  \vfill
+\end{spacing}
+\end{titlepage}
+
+\blankpage
+
+
+%----------------------------------------------
+%   Dedication
+%----------------------------------------------
+
+$if(thesis.dedication)$
+\clearpage
+ \begin{flushleft}%
+  \thispagestyle{empty}
+  \vspace*{\stretch{1}}
+  \normalsize\itshape\raggedleft{$thesis.dedication$}
+  \vspace*{\stretch{2}}
+\end{flushleft}
+\clearpage
+$endif$
+
+
+\afterpage{\blankpage}
+\pagenumbering{Roman} 
+
+
+% ============================================================
+% FOLHA DE APROVAÇÃO / BANCA
+% ============================================================
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+{\Large \textbf{Folha de Aprovação}}\\[1cm]
+\end{center}
+
+$if(thesis.author)$
+{\large Autor: $thesis.author$\\[0.5cm]}
+$endif$
+
+$if(thesis.title)$
+{\large Título: $thesis.title$\\[1cm]}
+$endif$
+
+Aprovado pela banca examinadora composta por:\\[0.5cm]
+
+$if(thesis.supervisor)$
+\textbf{Orientador:} $thesis.supervisor$%\\[0.3cm]
+$endif$
+
+$if(thesis.cosupervisor)$
+\textbf{Coorientador:} $thesis.cosupervisor$\\[0.3cm]
+$endif$
+
+$for(thesis.committee)$
+\textbf{Membro da banca:} $thesis.committee$\\[0.3cm]
+$endfor$
+
+\vfill
+
+  \vspace{1cm}
+  $if(thesis.city)${\large \centering $thesis.city$ \par}$endif$
+  $if(thesis.date)${\large \centering $thesis.date$ \par}$endif$
+
+\end{titlepage}
+
+%\blankpage
+
+% ============================================================
+% FICHA CATALOGRÁFICA (auto a partir do ISBN + metadados)
+% ============================================================
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+{\Large \textbf{Ficha Catalográfica}}\\[1cm]
+\end{center}
+
+$if(thesis.catalog-block)$
+\noindent \ttfamily \small
+$thesis.catalog-block$
+$else$
+\noindent \itshape (Informe um ISBN em YAML para preencher automaticamente.)
+$endif$
+
+\vfill
+\end{titlepage}
+
+\blankpage
+
+
+
+%----------------------------------------------
+%   Acknowledgements
+%----------------------------------------------
+
+$if(thesis.acknowledgements)$
+\clearpage
+\chapter*{\sffamily Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\vspace*{\baselineskip}
+\normalsize{$thesis.acknowledgements$}
+\clearpage
+~
+$endif$
+
+\thispagestyle{empty}
+
+%----------------------------------------------
+%   Abstract (English)
+%----------------------------------------------
+
+$if(thesis.abstract-english)$
+\clearpage
+\section*{\sffamily Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\normalsize{$thesis.abstract-english$}
+\vspace*{\baselineskip}
+\clearpage
+$endif$
+
+\blankpage
+
+%----------------------------------------------
+%   Abstract (Portuguese)
+%----------------------------------------------
+
+$if(thesis.abstract-portuguese)$
+\clearpage
+\section*{\sffamily Resumo}
+\normalsize{$thesis.abstract-portuguese$}
+\afterpage{\blankpage}
+$endif$
+\blankpage
+
+
+% %----------------------------------------------
+% %   Preface
+% %----------------------------------------------
+% 
+% $if(thesis.preface)$
+% \clearpage
+% \chapter*{\sffamily Preface}
+% \addcontentsline{toc}{chapter}{Preface}
+% \vspace*{\baselineskip}
+% \normalsize{$thesis.preface$}
+% \clearpage
+% $endif$
+
+%\end{spacing}

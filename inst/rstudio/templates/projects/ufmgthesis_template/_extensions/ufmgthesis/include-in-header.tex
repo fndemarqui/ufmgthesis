@@ -1,0 +1,48 @@
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{times}
+\usepackage{makeidx}
+\usepackage[b5paper]{geometry}
+\usepackage[frame, noinfo, a4, center]{crop} % cam for corner marks, frame for frame
+\usepackage{bookmark}
+\usepackage{booktabs}
+
+% to remove blank pages
+\usepackage{atbegshi} % http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+% to display pages in landscape mode (horizontally)
+\usepackage{lscape}
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}} 
+
+% to add blank pages
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage
+}
+
+\let\paragraph\oldparagraph
+\let\subparagraph\oldsubparagraph
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thechapter}{1em}{}
+\titleformat{\section}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsubsection}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesubsubsubsection}{1em}{}
+\titleformat{\subsubsubsubsection}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesubsubsubsubsection}{1em}{}
+ \titleformat{\subsubsubsubsubsection}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesubsubsubsubsubsection}{1em}{}
+\captionsetup[figure]{font=footnotesize,labelfont=footnotesize}
+
