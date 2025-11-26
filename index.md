@@ -1,4 +1,4 @@
-# UFMG’s Quarto Template for Writing Monographs, Dissertations and Thesis
+# UFMG’s Quarto Template for Writing Monographs, Dissertations and Theses
 
 You can install the development version of the R package ufmgthesis as
 follows:
