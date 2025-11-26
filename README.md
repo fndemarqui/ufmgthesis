@@ -8,7 +8,8 @@
 [![R-CMD-check](https://github.com/fndemarqui/ufmgthesis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/fndemarqui/ufmgthesis/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-You can install the development version of ufmgthesis package like so:
+You can install the development version of the R package ufmgthesis as
+follows:
 
 ``` r
 # install.packages("pak")
@@ -22,12 +23,15 @@ packages are installed:
 
 ``` r
 pkgs <- c("broom", "ggplot2", "kableExtra", "rmarkdown", "tinytex")
-install.packages(pkgs)
+pak::pkg_install(pkgs)
 ```
 
-Install [tinytex](https://yihui.org/tinytex/) from R in your Operating
-System:
+<!-- Install [tinytex](https://yihui.org/tinytex/) from R in your Operating System: -->
 
-``` r
-tinytex::install_tinytex()
-```
+<!-- ```{r} -->
+
+<!-- #| eval: false -->
+
+<!-- tinytex::install_tinytex() -->
+
+<!-- ``` -->

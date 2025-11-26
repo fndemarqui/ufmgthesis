@@ -1,6 +1,7 @@
 # UFMG’s Quarto Template for Writing Monographs, Dissertations and Thesis
 
-You can install the development version of ufmgthesis package like so:
+You can install the development version of the R package ufmgthesis as
+follows:
 
 ``` r
 # install.packages("pak")
@@ -14,12 +15,5 @@ packages are installed:
 
 ``` r
 pkgs <- c("broom", "ggplot2", "kableExtra", "rmarkdown", "tinytex")
-install.packages(pkgs)
-```
-
-Install [tinytex](https://yihui.org/tinytex/) from R in your Operating
-System:
-
-``` r
-tinytex::install_tinytex()
+pak::pkg_install(pkgs)
 ```

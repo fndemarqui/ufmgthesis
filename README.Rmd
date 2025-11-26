@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 
-You can install the development version of ufmgthesis package like so:
+You can install the development version of the R package ufmgthesis as follows:
 
 ```{r}
 #| eval: false
@@ -37,16 +37,16 @@ Before using the template for the first time, make sure the following packages a
 #| eval: false
 
 pkgs <- c("broom", "ggplot2", "kableExtra", "rmarkdown", "tinytex")
-install.packages(pkgs)
+pak::pkg_install(pkgs)
 ```
 
 
-Install [tinytex](https://yihui.org/tinytex/) from R in your Operating System:
+<!-- Install [tinytex](https://yihui.org/tinytex/) from R in your Operating System: -->
 
-```{r}
-#| eval: false
-tinytex::install_tinytex()
-```
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- tinytex::install_tinytex() -->
+<!-- ``` -->
 
 
 
