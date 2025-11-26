@@ -1,8 +1,0 @@
-name: ufmgthesis
-title: "UFMG Thesis Template"
-version: 1.0.0
-description: >
-  Quarto template for UFMG theses and dissertations.
-author: "Fábio Nogueira Demarqui"
-license: MIT
-thumbnail: logo.png
