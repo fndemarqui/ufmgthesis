@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# UFMG’s Quarto Template for Writing Monographs, Dissertations and Thesis
+# UFMG’s Quarto Template for Writing Monographs, Dissertations and Theses
 
 <!-- badges: start -->
 

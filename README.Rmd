@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# UFMG's Quarto Template for Writing Monographs, Dissertations and Thesis
+# UFMG's Quarto Template for Writing Monographs, Dissertations and Theses
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/fndemarqui/ufmgthesis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/fndemarqui/ufmgthesis/actions/workflows/R-CMD-check.yaml)

@@ -4,7 +4,7 @@ Title: UFMG's Quarto Templates for Writing Academic Documents
 Version: 0.0.1
 Authors@R: c(person(given = "Fabio", family = "Demarqui", role = c("aut", "cre"),
                     email = "fndemarqui@est.ufmg.br"))
-Description: Creates Quarto-based project templates for writing academic documents for UFMG students.
+Description: Creates Quarto-based project templates for writing academic documents (Monographs, Dissertations and Theses) for UFMG students.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
