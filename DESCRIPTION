@@ -9,10 +9,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 4.0)
-Imports:
-    fs,
-    cli,
-    rlang
+Imports: 
+    rlang,
+    usethis
 Suggests:
     broom,
     devtools,
@@ -22,6 +21,6 @@ Suggests:
     testthat,
     tinytex
 LazyData: true
-URL: https://github.com/fndemarqui/ufmgthesis
+URL: https://github.com/fndemarqui/ufmgthesis, https://fndemarqui.github.io/ufmgthesis/
 BugReports: https://github.com/fndemarqui/ufmgthesis/issues
 RoxygenNote: 7.3.3
