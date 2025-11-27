@@ -13,7 +13,7 @@ create_template <- function(path = "ufmgthesis", open = TRUE, ...) {
   }
 
   usethis::create_from_github(
-    repo_spec = "https://github.com/fndemarqui/ufmgthesis_template",
+    repo_spec = "https://github.com/fndemarqui/ufmg-templates",
     destdir = path,
     open = rlang::is_interactive(),
     fork = FALSE
